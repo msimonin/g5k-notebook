@@ -21,12 +21,16 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 
 RUN gem2.1 install bundler
 
-RUN mkdir -p /notebook
-COPY Gemfile /notebook/
-WORKDIR /notebook
+RUN mkdir -p /g5k-notebook
+COPY Gemfile /g5k-notebook/
+COPY notebooks /g5k-notebook/notebooks
+WORKDIR /g5k-notebook
 RUN bundle install
 
 RUN pip install ipython[notebook]
 RUN mkdir -p -m 700 /root/.jupyter/ && \
     echo "c.NotebookApp.ip = '*'" >> /root/.jupyter/jupyter_notebook_config.py
 
+WORKDIR notebooks
+
+EXPOSE 8888
