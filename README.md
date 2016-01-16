@@ -1,2 +1,1 @@
-# g5k-notebook
-Gather contribution around g5k notebook
+Contributions around g5k notebook
