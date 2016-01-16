@@ -17,7 +17,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
   libzmq3-dev\
   python-dev\
   ruby2.1\
-  ruby2.1-dev
+  ruby2.1-dev\
+  openssh-client
 
 RUN gem2.1 install bundler
 
