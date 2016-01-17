@@ -1,4 +1,10 @@
 Contributions around g5k notebook
+# Prerequisites
+
+* Have an account on Grid'5000
+* SSH keys configured to connect to ```access.grid5000.fr``` (with passphrase)
+* A SSH-agent running on you host machine
+
 
 # Use the docker image
 
