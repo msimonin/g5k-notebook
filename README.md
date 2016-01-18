@@ -34,7 +34,7 @@ password: MYPASSWORD
 
 ```
 
-> Don't forget to adapt your path to restfully forlder.
+> Don't forget to adapt your path to restfully folder.
 
 * ```-v $SSH_AUTH_SOCK:/ssh-agent``` and ```-e SSH_AUTH_SOCK=/ssh-agent ``` will allow the SSH client in your container to use the SSH agent of your host machine.
 
