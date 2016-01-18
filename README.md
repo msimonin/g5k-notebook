@@ -8,7 +8,6 @@ Contributions around g5k notebook
 
 # Use the docker image
 
-
 ```
 docker run --rm -it\
   -p 8888:8888 \
@@ -32,13 +31,20 @@ uri: https://api.grid5000.fr/stable/grid5000
 username: MYLOGIN
 password: MYPASSWORD
 ' > ~/.restfully/api.grid5000.fr.yml && chmod 600 ~/.restfully/api.grid5000.fr.yml
+
 ```
+
+> Don't forget to adapt your path to restfully forlder.
 
 * ```-v $SSH_AUTH_SOCK:/ssh-agent``` and ```-e SSH_AUTH_SOCK=/ssh-agent ``` will allow the SSH client in your container to use the SSH agent of your host machine.
 
 * ```-e RESTFULLY_CONFIG="/.restfully/api.grid5000.fr.yml"``` tells ```restfully``` to use the previously mounted file as base configuration.
 
+> Don't forget to adapt the name of the sepectific grid5000 restfully file.
+
 * ```-e USER=msimonin``` sets the USER variable (used by ```xp5k```) for ssh connection to Grid'5000.
+
+> Don't forget to set your Grid'5000 username.
 
 ## On Mac OS using ```docker-machine```
 
